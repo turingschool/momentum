@@ -1,0 +1,18 @@
+<div id="<%= dom_id person %>">
+  <h2><%= person.first_name + " " + person.last_name %></h2>
+  
+  <h4>Job Reports</h4>
+  <ul>
+    <% person.job_reports.each do |job_report| %>
+      <li>
+        <ul>
+          <li><%= job_report.company.name %></li>
+          <li><%= job_report.title %></li>
+          <li><%= job_report.salary %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Create a Job Report", new_job_report_path(:person_id => person.id) %>
+
+</div>

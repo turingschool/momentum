@@ -1,0 +1,9 @@
+<h1>New Job Report for <%= @job_report.person.first_name %></h1>
+
+<%= render "form", job_report: @job_report %>
+
+<br>
+
+<div>
+  <%= link_to "Back to job reports", job_reports_path %>
+</div>
